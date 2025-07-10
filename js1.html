@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum()
+        {
+            var n1;
+            var n2;
+            var r;
+            n1=parseInt(document.getElementById("txtn1").value);  // get
+            n2=parseInt(document.getElementById("txtn2").value);
+            r=n1+n2
+            document.getElementById("txtr").value=r;  // set
+
+            if(n1>n2)
+            {
+                document.getElementById("welcome").innerHTML= n1 + " is Big"
+            }
+            else
+            {
+                  document.getElementById("welcome").innerHTML= n2 + " is Big"
+            }
+        }
+    </script>
+</head>
+<body>
+ <table border="1">
+    <tr>
+        <th>Enter 1st Number</th>
+        <td><input type="text" name="txtn1" id="txtn1"/></td>
+    </tr>
+    <tr>    
+        <th>Enter 2nd Number</th>
+        <td><input type="text" name="txtn2" id="txtn2"/></td>
+    </tr>
+    <tr>
+        <th>Get Result</th>
+        <td><input type="button" value="Sum" onclick="sum()" /></td>
+    </tr>
+
+    <tr>
+        <th>Result is:</th>
+        <td><input type="text" name="txtr" id="txtr"/></td>
+        
+        
+    </tr>
+ </table>
+<p id="welcome">
+
+    .........................
+
+</p>    
+ <script>
+/*
+multiline comment 
+...
+...
+
+*/
+ // document is an object of html page it is ued to access html element
+
+ //alert("Hello User. Welcome to js.");
+ //document.write("<h1>Hello User. Welcome to JS</h1>");
+ 
+ document.getElementById("welcome").innerHTML="Hello User. Welcome you in JS";
+
+ </script>   
+</body>
+</html>
+
+<!--
+htmlpage - Document
+every html document has an object model
+
+html document collection of elements - collection of element create a model 
+
+we have some tools to access the model of a document 
+    css
+    js  - java script 
+
+java script is used to make you html page programable.
+ using js we can perform calculation in html page
+
+
+-->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+    <script>
+        function sum()
+        {
+            var n1;
+            var n2;
+            var s;
+            n1=parseFloat(document.getElementById("txtn1").value);
+            n2=parseFloat(document.getElementById("txtn2").value);
+            s=n1+n2;
+            //var msg;
+            //msg=`The sum of ${n1} and ${n2} is ${s}`;
+            //document.write(`The sum of ${n1} and ${n2} is ${s}`);
+            document.getElementById("txtresult").value=s;
+        }    
+        
+    </script>
+</head>
+<body>
+    
+    <table border="1px">
+        <tr>
+            <th>enter 1st number</th>
+            <td><input type="text" id="txtn1"/></td>
+        </tr>
+        <tr>
+            <th>enter 2nd number</th>
+            <td><input type="text" id="txtn2"/></td>
+        </tr>
+        <tr>
+            <th>Action</th>
+            <td><input type="button" value="Get Sum" onclick="sum()" id="btnsum"/></td>
+        </tr>
+        <tr>
+            <th>Rseult</th>
+            <td><input type="text" id="txtresult"/></td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>

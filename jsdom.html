@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+    <script>
+        function sum()
+        {
+            var n1;
+            var n2;
+            var s;
+            n1=parseFloat(prompt("enter 1st number"));
+            n2=parseFloat(prompt("enter 2nd number"));
+            s=n1+n2;
+            var msg;
+            msg=`The sum of ${n1} and ${n2} is ${s}`;
+            //document.write(`The sum of ${n1} and ${n2} is ${s}`);
+            document.getElementById("result").innerHTML=msg;
+        }    
+        
+    </script>
+</head>
+<body>
+    <input type="button" value="Sum" onclick="sum()" />
+    <h1 id="result">
+
+    </h1>
+</body>
+</html>

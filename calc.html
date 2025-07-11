@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <script>
+        var op;
+        var n1;
+        var n2;
+        var r;
+        function btnDigitCLick(btn)
+        {
+           document.getElementById("txtnum").value+=btn.value;     
+        }
+        function btnOperatorClick(btn)
+        {
+            op=btn.value;
+            n1=parseFloat(document.getElementById("txtnum").value);
+            document.getElementById("txtnum").value="";
+        }
+        function btneqClick()
+        {
+            n2=parseFloat(document.getElementById("txtnum").value);
+            if(op==="+")
+            {
+              r=n1+n2;  
+            }
+            else if(op==="-")
+            {
+              r=n1-n2;  
+            }
+            else if(op==="/")
+            {
+              r=n1/n2;  
+            }
+            else if(op==="*")
+            {
+              r=n1*n2;  
+            }
+            
+            document.getElementById("txtnum").value=r;
+        }
+        function btnbackspaceClick()
+        {
+            var str;
+            str=document.getElementById("txtnum").value; 
+            var x=str.length;
+            if(x>0)
+            {
+                str=str.substring(0,x-1);
+            }
+            document.getElementById("txtnum").value=str;
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="6"><input type="text" id="txtnum" style="text-align: right;"></td>
+        </tr>
+        <tr>
+            <td><label id="lblmem"></label></td>
+            <td colspan="2"><input type="button" id="btnbackspace" value="Backspace" onclick="btnbackspaceClick()"></td>
+            
+            <td colspan="2"><input type="button" id="btnCE" value="CE"></td>
+            <td><input type="button" id="btnC" value="C"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="MC" id="btnMC"></td>
+            <td><input type="button" value="7" id="btn7" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="8" id="btn8" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="9" id="btn9" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="/" id="btndiv" onclick="btnOperatorClick(this)"></td>
+            <td><input type="button" value="sq" id="btnsq"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="MR" id="btnMR"></td>
+            <td><input type="button" value="4" id="btn4" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="5" id="btn5" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="6" id="btn6" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="*" id="btnpro" onclick="btnOperatorClick(this)"></td>
+            <td><input type="button" value="%" id="btnper"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="MS" id="btnMS"></td>
+            <td><input type="button" value="1" id="btn1" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="2" id="btn2" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="3" id="btn3" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="-" id="btnmi" onclick="btnOperatorClick(this)" ></td>
+            <td><input type="button" value="1/x" id="btnobx"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="M+" id="btnMP"></td>
+            <td><input type="button" value="0" id="btn0" onclick="btnDigitCLick(this)"></td>
+            <td><input type="button" value="+/-" id="btnpm"></td>
+            <td><input type="button" value="." id="btndot"></td>
+            <td><input type="button" value="+" id="btnp" onclick="btnOperatorClick(this)"></td>
+            <td><input type="button" value="=" id="btneq" onclick="btneqClick()"></td>
+        </tr>
+        
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        //https://practicise.com/course/learn-javascript-complete-course/lesson/array-methods/
+
+        var numbers=[1,2,3,4,6,7,8,12];
+        var a=Array(10);
+        var i;
+        for(i=0;i<10;i++)
+        {
+            a[i]=parseInt(prompt(`enter item ${i+1}:`));         
+        }
+        document.write(a);
+        
+        //var i;
+        // for(i=0;i<numbers.length;i++)
+        // {
+        //     var x=numbers[i];
+        //     document.write(`<br/>${x*x}`);
+        // }
+        var sqrts=numbers.map(x=>x*x);
+        document.write(sqrts);
+
+        document.write("<br/> even numbers:");
+        // var j;
+        // for(j=0;j<numbers.length;j++)
+        // {
+        //     var x=numbers[j];
+        //     if(x%2==0)
+        //     {
+        //         document.write(`<br/>${x}`);    
+        //     }
+            
+        // }
+        var evens=numbers.filter(x=>x%2===0);
+        document.write(evens);
+
+        let fruits = ["Apple", "Banana", "Mango"];
+        // var fruit;
+        // var i;
+        // for(i=0;i<fruits.length;i++)
+        // {
+        //     fruit=fruits[i];
+        //     document.write(`<br/> ${fruit}`);        
+        // }
+        fruits.forEach(fruit=>document.write(`<br/>${fruit}`));
+
+    </script>
+</body>
+</html>

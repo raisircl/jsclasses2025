@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggel</title>
+    <style>
+        .highlight
+        {
+            color: red;
+            font-size:"30px";
+            background-color:lightgray;
+        }
+    </style>
+    <script>
+        function t1()
+        {
+        let heading = document.querySelector("#main-title");
+        //heading.classList.add("highlight");
+        //heading.classList.remove("highlight");
+        heading.classList.toggle("highlight");  // Toggles the class
+        }
+       
+        </script>
+</head>
+<body>
+    <h1 id="main-title">Welcome to title</h1>
+    <button onclick="t1()">Toggel1</button>
+   
+</body>
+</html>

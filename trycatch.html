@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch</title>
+</head>
+<body>
+    <script>
+        try
+        {
+            var n1,n2, r;
+            n1=parseInt(prompt("enter 1st number"));
+            n2=parseInt(prompt("enter 2nd number"));
+            if(n2==0)
+            {
+                throw new Error("2nd number can not be zero.");        
+            }
+            r=n1/n2;
+            document.write(`Div is ${r}`)
+        }
+        catch(error)
+        {
+            document.write(`${error.message}`);
+        }
+    </script>
+</body>
+</html>

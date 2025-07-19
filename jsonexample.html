@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const requestOptions = {
+    method: "GET",
+    redirect: "follow"
+    };
+
+    fetch("https://localhost:7195/api/Employee", requestOptions)
+    .then((response) => response.text())
+    .then((result) => {
+        var employees=JSON.parse(result);
+        console.log(employees);
+        var emp1=employees.result[0];
+        document.write(emp1.firstName);
+
+    })
+    .catch((error) => console.error(error));
+
+    </script>
+</body>
+</html>
